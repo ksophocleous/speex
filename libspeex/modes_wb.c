@@ -32,6 +32,10 @@
 
 */
 
+#ifdef _MSC_VER
+#pragma warning(disable:4305)
+#endif
+
 #ifdef HAVE_CONFIG_H
 #include "config.h"
 #endif
