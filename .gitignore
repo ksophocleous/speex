@@ -38,3 +38,4 @@ src/speexdec
 src/speexenc
 stamp-*
 patches
+build/
