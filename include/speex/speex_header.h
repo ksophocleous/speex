@@ -75,16 +75,16 @@ typedef struct SpeexHeader {
 } SpeexHeader;
 
 /** Initializes a SpeexHeader using basic information */
-void speex_init_header(SpeexHeader *header, int rate, int nb_channels, const struct SpeexMode *m);
+PUBLIC_API void speex_init_header(SpeexHeader *header, int rate, int nb_channels, const struct SpeexMode *m);
 
 /** Creates the header packet from the header itself (mostly involves endianness conversion) */
-char *speex_header_to_packet(SpeexHeader *header, int *size);
+PUBLIC_API char *speex_header_to_packet(SpeexHeader *header, int *size);
 
 /** Creates a SpeexHeader from a packet */
-SpeexHeader *speex_packet_to_header(char *packet, int size);
+PUBLIC_API SpeexHeader *speex_packet_to_header(char *packet, int size);
 
 /** Frees the memory allocated by either speex_header_to_packet() or speex_packet_to_header() */
-void speex_header_free(void *ptr);
+PUBLIC_API void speex_header_free(void *ptr);
 
 #ifdef __cplusplus
 }
