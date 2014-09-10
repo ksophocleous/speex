@@ -1,5 +1,5 @@
 
-option(LIBSPEEX_BUILD_SHARED "Build shared version libspeex" ON)
+option(BUILD_SHARED_LIBS "Build shared version libspeex" ON)
 
 list(APPEND srcs
 	"bits.c"
@@ -115,7 +115,7 @@ list(APPEND definitions
 	"_CRT_SECURE_NO_WARNINGS"
 	"LIBSPEEX_EXPORT")
 
-if(LIBSPEEX_BUILD_SHARED)
+if(BUILD_SHARED_LIBS)
 	set(LIBTYPE SHARED)
 	list(APPEND definitions "LIBSPEEX_DLL_EXPORT")
 	list(APPEND public_definitions "LIBSPEEX_DLL_IMPORT")
